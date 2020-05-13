@@ -1,0 +1,12 @@
+@import '../variables.scss';
+.footer {
+    text-align: center;
+    height: 50px;
+    padding: 10px 20px;
+    background: #eceff1;
+    color: gray;
+    font-family: $font;
+    .link {
+        cursor: pointer;
+    }
+}
