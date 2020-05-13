@@ -16,6 +16,7 @@ class Header extends Component {
         })
     }
 
+
     render() {
         if (this.state.goToHome) {
             return <Redirect push to='/'></Redirect>
@@ -25,8 +26,8 @@ class Header extends Component {
             <header>
                 <nav>
                     {this.props.location === '/fruits' || this.props.location === '/legumes' ? <span className='link' onClick={this.goToHome}><li>Essentiel Bio</li></span> : <span ><li>Essentiel Bio</li></span>}
-                    <li>Fruits</li>
-                    <li>Legumes</li>
+                    <li className='link' onClick={this.props.goToFruits}>Fruits</li>
+                    <li className='link' onClick={this.props.goToLegumes}>Legumes</li>
                     <li>Recettes</li>
                 </nav>
             </header >

@@ -110,14 +110,14 @@ class App extends Component {
     if (this.state.goToFruits) {
       return <Redirect push to={{
         pathname: '/fruits',
-        state: { fruits: this.state.fruits }
+        state: { fruits: this.state.fruits, legumes: this.state.legumes }
       }}></ Redirect>
     }
 
     if (this.state.goToLegumes) {
       return <Redirect push to={{
         pathname: '/legumes',
-        state: { legumes: this.state.legumes }
+        state: { legumes: this.state.legumes, fruits: this.state.fruits }
       }}></ Redirect>
     }
 
@@ -131,7 +131,7 @@ class App extends Component {
 
     return (
       <div>
-        <Header />
+        <Header goToFruits={this.goToFruits} goToLegumes={this.goToLegumes} />
         <Hero />
         <div className='cards'>
           <div className='header'>
