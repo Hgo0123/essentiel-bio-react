@@ -30,11 +30,7 @@ const Root = () => (
       <Route exact path='/legumes' component={Legumes} />
       <Route exact path='/connexion' component={Connexion} />
       <Route exact path='/admin' component={Admin} />
-
-
-
       <Route component={NotFound} />
-
     </Switch>
   </Router>
 

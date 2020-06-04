@@ -105,6 +105,25 @@ class App extends Component {
       legumes: legumes
     })
   }
+  majFruit = (key, fruit) => {
+    const fruits = { ...this.state.fruits }
+    fruits[key] = fruit
+
+    this.setState({
+      fruits
+    })
+  }
+
+  majLegumes = (id, legume) => {
+    const legumes = { ...this.state.legumes }
+    legumes[id] = legume
+    this.setState({
+      legumes
+    })
+  }
+
+
+
   render() {
 
     if (this.state.goToFruits) {
@@ -164,7 +183,7 @@ class App extends Component {
             <button type='submit'>GO</button>
           </form>
         </div> : null}
-        {this.state.password === pass ? <Admin addLegumes={this.addLegumes} addFruits={this.addFruits} fruits={this.state.fruits} legumes={this.state.legumes} suppFruits={this.suppFruits} suppLegumes={this.suppLegumes} /> : null}
+        {this.state.password === pass ? <Admin addLegumes={this.addLegumes} addFruits={this.addFruits} fruits={this.state.fruits} legumes={this.state.legumes} suppFruits={this.suppFruits} suppLegumes={this.suppLegumes} majFruit={this.majFruit} majLegumes={this.majLegumes} /> : null}
       </div >
     )
   }

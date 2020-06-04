@@ -10,16 +10,16 @@ import AdminFormLegumes from './AdminFormLegumes'
 
 class Admin extends Component {
     render() {
-        const { addFruits, addLegumes, suppFruits, suppLegumes, fruits, legumes } = this.props
+        const { addFruits, addLegumes, suppFruits, suppLegumes, fruits, legumes, majFruit, majLegumes } = this.props
         return (
             <div className="cards">
                 <AddFruits addFruits={addFruits} />
                 <AddLegumes addLegumes={addLegumes} />
                 {Object.keys(fruits).map(item => (
-                    <AdminFormFruits key={item} id={item} fruits={fruits} suppFruits={suppFruits} />
+                    <AdminFormFruits key={item} id={item} fruits={fruits} suppFruits={suppFruits} majFruit={majFruit} />
                 ))}
                 {Object.keys(legumes).map(item => (
-                    <AdminFormLegumes key={item} id={item} legumes={legumes} suppLegumes={suppLegumes} />
+                    <AdminFormLegumes key={item} id={item} legumes={legumes} suppLegumes={suppLegumes} majLegumes={majLegumes} />
                 ))}
             </div>
         )

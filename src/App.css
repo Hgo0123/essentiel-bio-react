@@ -2,3 +2,10 @@
 .App {
   text-align: center;
 }
+.jumbotron {
+  background-image: url('assets/marché.png');
+  background-repeat: no-repeat;
+background-size: cover;
+background-position-y: 50%;
+height: 60vh;
+}
